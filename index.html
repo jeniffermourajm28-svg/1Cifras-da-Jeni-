@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cifra Gospel</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cifra Gospel</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- SUBTÍTULO FORA DO CARD -->
-  <p id="subInfo">Buscador simples de cifras gospel</p>
+<p id="subInfo">Buscador simples de cifras gospel</p>
 
-  <div class="card">
-    <div id="icone-busca">🔍</div>
+<div class="card">
 
-    <header class="topo">
-      <div class="logo">
-        <img src="logo.png" alt="Cifras da Jeni">
-      </div>
-    </header>
-
-    <p id="descricao">Clique no botão para buscar uma cifra</p>
-
-    <button id="botaoBuscar">Buscar cifra</button>
-
-    <input
-      type="text"
-      id="busca"
-      placeholder="Digite o nome da música"
-      style="display: none;"
-    >
-
-    <div id="lista-musicas"></div>
-
-    <div id="resultado" style="display: none;"></div>
-    <button id="modoPalcoBtn" style="display: none;">🎤 Modo Palco</button>
+  <div class="logo">
+    <img src="logo.png" alt="Cifras da Jeni">
   </div>
 
-  <script src="cifras.js"></script>
-  <script src="script.js"></script>
-  <button id="btnCompartilhar">📤</button>
+  <p id="descricao">Digite o nome da música abaixo:</p>
 
+  <button id="botaoBuscar">🔎 Buscar Cifra</button>
+
+  <div class="busca-container">
+    <input type="text" id="busca" placeholder="Digite o nome da música">
+  </div>
+
+  <div id="lista-musicas"></div>
+  <div id="resultado"></div>
+  <button id="modoPalcoBtn">🎤 Modo Palco</button>
+
+</div>
+
+<!-- Ícones fixos fora do card -->
+<div id="icone-busca" class="icon hidden">🔍</div>
+<button id="btnCompartilhar" class="icon hidden">📤</button>
+
+<script src="cifras.js"></script>
+<script src="script.js"></script>
 </body>
+</html>
 
 
 
 
   
+
 
 
 

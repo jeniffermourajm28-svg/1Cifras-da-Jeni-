@@ -1,0 +1,214 @@
+body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+#descricao {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 300px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#lista-musicas {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.musica {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.musica:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.musica strong {
+  display: block;
+}
+
+.musica span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+#resultado {
+  margin-top: 30px;
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+#resultado.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#resultado h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+#resultado p {
+  margin-top: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+#resultado pre {
+  background-color: #000;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+#icone-busca {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+}
+
+#modoPalcoBtn {
+  margin-top: 15px;
+  background-color: #333;
+}
+
+.modo-palco {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.modo-palco pre {
+  font-size: 24px;
+  line-height: 2;
+}
+
+#sairPalco {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  background-color: #222;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* BOTÃO COMPARTILHAR */
+#btnCompartilhar {
+  position: fixed;
+  top: 15px;
+  right: 60px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#btnCompartilhar:hover {
+  background: #000;
+}
+
+.musica:active {
+  transform: scale(0.97);
+}
+
+

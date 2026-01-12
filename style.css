@@ -17,27 +17,46 @@ body {
   min-height: 100vh;
 }
 
-header {
+/* CARD PRINCIPAL */
+.card {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 380px;
   text-align: center;
-  margin-bottom: 30px;
+  animation: fadeDown 0.6s ease;
+}
+/* TOPO */
+.topo {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
-  letter-spacing: 1px;
+/* LOGO */
+.logo img {
+  height: 400px;
+  width: auto;
+  display: block;
+  margin: 0 auto 0 auto; /* remove espaço abaixo */
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
 }
 
-header p {
-  margin-top: 5px;
-  font-size: 14px;
+/* SUBTÍTULO */
+.topo p {
+  margin-top: -6px;  /* aproxima de verdade */
+  font-size: 18x;
   color: #aaa;
 }
 
+
+/* DESCRIÇÃO */
 #descricao {
   margin-bottom: 15px;
 }
 
+/* BOTÕES */
 button {
   background-color: #1f1f1f;
   color: #fff;
@@ -54,6 +73,7 @@ button:hover {
   background-color: #333;
 }
 
+/* INPUT */
 input {
   padding: 10px;
   border-radius: 5px;
@@ -67,17 +87,7 @@ input::placeholder {
   color: #888;
 }
 
-.card {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
+/* LISTA DE MÚSICAS */
 #lista-musicas {
   margin-top: 20px;
   width: 100%;
@@ -96,6 +106,10 @@ input::placeholder {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
+.musica:active {
+  transform: scale(0.97);
+}
+
 .musica strong {
   display: block;
 }
@@ -105,6 +119,7 @@ input::placeholder {
   color: #aaa;
 }
 
+/* RESULTADO */
 #resultado {
   margin-top: 30px;
   background-color: #1b1b1b;
@@ -121,17 +136,6 @@ input::placeholder {
   transform: translateY(0);
 }
 
-#resultado h2 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-#resultado p {
-  margin-top: 0;
-  font-size: 14px;
-  color: #aaa;
-}
-
 #resultado pre {
   background-color: #000;
   padding: 15px;
@@ -142,6 +146,7 @@ input::placeholder {
   white-space: pre-wrap;
 }
 
+/* ÍCONE DE BUSCA */
 #icone-busca {
   position: fixed;
   top: 20px;
@@ -155,11 +160,13 @@ input::placeholder {
   z-index: 999;
 }
 
+/* BOTÃO MODO PALCO */
 #modoPalcoBtn {
   margin-top: 15px;
   background-color: #333;
 }
 
+/* MODO PALCO */
 .modo-palco {
   position: fixed;
   top: 0;
@@ -178,6 +185,7 @@ input::placeholder {
   line-height: 2;
 }
 
+/* SAIR DO PALCO */
 #sairPalco {
   position: fixed;
   top: 20px;
@@ -188,6 +196,7 @@ input::placeholder {
   border-radius: 8px;
   cursor: pointer;
 }
+
 /* BOTÃO COMPARTILHAR */
 #btnCompartilhar {
   position: fixed;
@@ -207,9 +216,27 @@ input::placeholder {
   background: #000;
 }
 
-.musica:active {
-  transform: scale(0.97);
+/* ANIMAÇÃO */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+#subInfo {
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  margin: 0 auto 12px auto;
+  font-size: 11px;
+  color: #aaa;
+  opacity: 0.8;
+}
+
 
 
 

@@ -1,241 +1,128 @@
-body {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.85)
-    ),
-    url("fundo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-  color: #ffffff;
-  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== SUB INFO ===== */
+#subInfo {
+  font-size: 12px;
+  color: #aaa;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 15px auto;
+}
+
+/* ===== CARD ===== */
+.card {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 15px;
+  padding: 30px 25px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.logo img {
+  max-height: 340px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#descricao {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* ===== BOTÃO BUSCAR ===== */
+#botaoBuscar, #modoPalcoBtn {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,#4facfe,#00f2fe);
+  color: #fff;
+}
+
+#modoPalcoBtn { display:none; }
+
+/* ===== BUSCA ===== */
+.busca-container {
+  width: 0;
+  max-width: 300px;
+  margin: 10px auto;
+  opacity: 0;
+  overflow: hidden;
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+.busca-container.active {
+  width: 100%;
+  opacity: 1;
+}
+
+#busca {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background: linear-gradient(145deg,#1c1c1c,#2a2a2a);
+  color: #fff;
+}
+
+/* ===== LISTA ===== */
+#lista-musicas {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-  min-height: 100vh;
-}
-
-/* CARD PRINCIPAL */
-.card {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 30px 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  animation: fadeDown 0.6s ease;
-}
-/* TOPO */
-.topo {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-/* LOGO */
-.logo img {
-  height: 400px;
-  width: auto;
-  display: block;
-  margin: 0 auto 0 auto; /* remove espaço abaixo */
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
-}
-
-/* SUBTÍTULO */
-.topo p {
-  margin-top: -6px;  /* aproxima de verdade */
-  font-size: 18x;
-  color: #aaa;
-}
-
-
-/* DESCRIÇÃO */
-#descricao {
-  margin-bottom: 15px;
-}
-
-/* BOTÕES */
-button {
-  background-color: #1f1f1f;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  width: 300px;
-  font-size: 16px;
-}
-
-button:hover {
-  background-color: #333;
-}
-
-/* INPUT */
-input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  width: 300px;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-input::placeholder {
-  color: #888;
-}
-
-/* LISTA DE MÚSICAS */
-#lista-musicas {
-  margin-top: 20px;
-  width: 100%;
+  gap: 8px;
 }
 
 .musica {
   padding: 10px;
-  margin-bottom: 8px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255,255,255,0.05);
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .musica:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255,255,255,0.2);
+  transform: scale(1.02);
 }
 
-.musica:active {
-  transform: scale(0.97);
-}
-
-.musica strong {
-  display: block;
-}
-
-.musica span {
-  font-size: 12px;
-  color: #aaa;
-}
-
-/* RESULTADO */
 #resultado {
-  margin-top: 30px;
+  display: none;
+  margin-top: 20px;
   background-color: #1b1b1b;
   padding: 20px;
   border-radius: 8px;
-  width: 320px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-#resultado.mostrar {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#resultado pre {
-  background-color: #000;
-  padding: 15px;
-  border-radius: 5px;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 1.6;
   white-space: pre-wrap;
 }
 
-/* ÍCONE DE BUSCA */
-#icone-busca {
+/* ===== ÍCONES FIXOS ===== */
+#icone-busca, #btnCompartilhar {
   position: fixed;
-  top: 20px;
   right: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
   display: none;
   z-index: 999;
-}
-
-/* BOTÃO MODO PALCO */
-#modoPalcoBtn {
-  margin-top: 15px;
-  background-color: #333;
-}
-
-/* MODO PALCO */
-.modo-palco {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 30px;
-  overflow-y: auto;
-  z-index: 9999;
-}
-
-.modo-palco pre {
-  font-size: 24px;
-  line-height: 2;
-}
-
-/* SAIR DO PALCO */
-#sairPalco {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 18px;
-  background-color: #222;
-  padding: 10px 15px;
-  border-radius: 8px;
   cursor: pointer;
 }
 
-/* BOTÃO COMPARTILHAR */
-#btnCompartilhar {
-  position: fixed;
-  top: 15px;
-  right: 60px;
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 9999;
+#icone-busca { top: 20px; font-size: 24px; padding: 10px; border-radius:50%; background: linear-gradient(135deg,#4facfe,#00f2fe); color:#fff;}
+#btnCompartilhar { top: 70px; font-size: 22px; padding:14px; border-radius:50%; background:#222; color:#fff; }
+
+.hidden { display:none !important; }
+
+@media (max-width:480px){
+  .card { max-width: 95%; padding:20px; }
+  .logo img { max-height: 150px; }
 }
 
-#btnCompartilhar:hover {
-  background: #000;
-}
 
-/* ANIMAÇÃO */
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#subInfo {
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  margin: 0 auto 12px auto;
-  font-size: 11px;
-  color: #aaa;
-  opacity: 0.8;
-}
 
 
 

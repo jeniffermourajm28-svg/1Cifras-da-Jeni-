@@ -56,6 +56,7 @@ function mostrarCifra(chave, modoPalco = false) {
   busca.style.display = "none";
   lista.style.display = "none";
   iconeBusca.style.display = "block";
+document.getElementById("subInfo").style.display = "none";
 }
 
 /* ===============================
@@ -137,6 +138,7 @@ iconeBusca.addEventListener("click", () => {
   iconeBusca.style.display = "none";
   modoPalcoBtn.style.display = "none";
   busca.focus();
+document.getElementById("subInfo").style.display = "block";
 });
 
 /* ===============================
@@ -190,6 +192,7 @@ btnCompartilhar?.addEventListener("click", () => {
   navigator.clipboard.writeText(window.location.href)
     .then(() => alert("Link copiado! 🎶"));
 });
+
 
 
 
